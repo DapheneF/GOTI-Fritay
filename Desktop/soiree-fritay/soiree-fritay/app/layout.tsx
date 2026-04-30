@@ -1,5 +1,6 @@
 import { Bebas_Neue, Nunito } from 'next/font/google';
 import './globals.css';
+import React from 'react';
 
 const bebas = Bebas_Neue({
   weight: '400',
@@ -13,11 +14,11 @@ const nunito = Nunito({
 });
 
 export const metadata = {
-  title: 'GOTI Fritay',
+  title: 'Soirée Fritay',
   description: 'Cuisine haïtienne authentique – Réservez votre plat',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
       <body className={`${bebas.variable} ${nunito.variable}`}>
